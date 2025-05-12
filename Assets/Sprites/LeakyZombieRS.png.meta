@@ -64,7 +64,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -78,7 +78,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -130,12 +130,12 @@ TextureImporter:
       name: LeakyZombieRS_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 131
-        width: 24
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 128
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -152,12 +152,12 @@ TextureImporter:
       name: LeakyZombieRS_1
       rect:
         serializedVersion: 2
-        x: 35
-        y: 131
-        width: 24
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 128
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -175,11 +175,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 67
-        width: 30
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 64
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -196,12 +196,12 @@ TextureImporter:
       name: LeakyZombieRS_3
       rect:
         serializedVersion: 2
-        x: 31
-        y: 67
-        width: 31
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 64
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -218,12 +218,12 @@ TextureImporter:
       name: LeakyZombieRS_4
       rect:
         serializedVersion: 2
-        x: 63
-        y: 67
-        width: 31
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 64
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -240,20 +240,20 @@ TextureImporter:
       name: LeakyZombieRS_5
       rect:
         serializedVersion: 2
-        x: 95
-        y: 67
-        width: 31
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 64
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1c43080d471aae880800000000000000
-      internalID: -8580868616914717503
+      spriteID: 62c264fc858e0dc43a5367398f4a492b
+      internalID: 618340481
       vertices: []
       indices: 
       edges: []
@@ -262,20 +262,20 @@ TextureImporter:
       name: LeakyZombieRS_6
       rect:
         serializedVersion: 2
-        x: 2
-        y: 3
-        width: 31
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 278b0c3304b8e77a0800000000000000
-      internalID: -6377506914447607694
+      spriteID: a14b3b23e4968d645ae0025aeaa2fb75
+      internalID: -1278543077
       vertices: []
       indices: 
       edges: []
@@ -284,20 +284,20 @@ TextureImporter:
       name: LeakyZombieRS_7
       rect:
         serializedVersion: 2
-        x: 34
-        y: 3
-        width: 31
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 0
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5cc9d64952f03fff0800000000000000
-      internalID: -3642520618820411
+      spriteID: abe15bd13301d4746abbaea30aad4671
+      internalID: 1727574095
       vertices: []
       indices: 
       edges: []
@@ -306,20 +306,20 @@ TextureImporter:
       name: LeakyZombieRS_8
       rect:
         serializedVersion: 2
-        x: 66
-        y: 3
-        width: 31
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 0
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2c1a4736fb441fb00800000000000000
-      internalID: 860544592602505666
+      spriteID: acc70c1c79549784899c3f62487cb1fe
+      internalID: -628860623
       vertices: []
       indices: 
       edges: []
@@ -328,20 +328,20 @@ TextureImporter:
       name: LeakyZombieRS_9
       rect:
         serializedVersion: 2
-        x: 98
-        y: 3
-        width: 30
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 0
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f4dde860c2f85b050800000000000000
-      internalID: 5815711913070222671
+      spriteID: 61cbe00b7ad1d064593829c9ca9f6ebe
+      internalID: -350580196
       vertices: []
       indices: 
       edges: []
@@ -350,7 +350,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 72df6c7aff88d6c4e8fbc971f57c4525
     internalID: 0
     vertices: []
     indices: 
@@ -359,7 +359,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LeakyZombieRS_0: 4927212798981337883
+      LeakyZombieRS_1: 3818836045960580655
+      LeakyZombieRS_2: 6160213208012246106
+      LeakyZombieRS_3: -10350875219027542
+      LeakyZombieRS_4: 5049174226119868931
+      LeakyZombieRS_5: 618340481
+      LeakyZombieRS_6: -1278543077
+      LeakyZombieRS_7: 1727574095
+      LeakyZombieRS_8: -628860623
+      LeakyZombieRS_9: -350580196
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -245,7 +245,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -75224854, guid: 478a100d121726e43b8030f7be703933, type: 3}
+  m_Sprite: {fileID: 4927212798981337883, guid: a1ac0f81d613d4649b1819d84cee9ee1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -382,9 +382,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fullHealthImage: {fileID: 3688609533332162171, guid: 8b8c74e66fe57b549aeedb8a3bc45bee, type: 3}
-  emptyHealthImage: {fileID: 0}
+  halfHealthImage: {fileID: -3370478484867877432, guid: 8b8c74e66fe57b549aeedb8a3bc45bee, type: 3}
+  emptyHealthImage: {fileID: -1626527116, guid: 8b8c74e66fe57b549aeedb8a3bc45bee, type: 3}
   timeBetweenHealthRegeneration: 10
-  maxHealth: 3
+  maxHealth: 8
   knockBackThrustAmount: 10
   damageRecoveryTime: 1
 --- !u!114 &2358879408617217932

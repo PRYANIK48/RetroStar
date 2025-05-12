@@ -8,9 +8,9 @@ public class PlayerHealth : Singleton<PlayerHealth>
 {
     public bool IsDead { get; private set; }
 
-    [SerializeField] private Sprite fullHealthImage, emptyHealthImage;
+    [SerializeField] private Sprite fullHealthImage, halfHealthImage, emptyHealthImage;
     [SerializeField] private int timeBetweenHealthRegeneration = 10;
-    [SerializeField] private int maxHealth = 3;
+    [SerializeField] private int maxHealth = 8;
     [SerializeField] private float knockBackThrustAmount = 10f;
     [SerializeField] private float damageRecoveryTime = 1f;
 
@@ -96,19 +96,18 @@ public class PlayerHealth : Singleton<PlayerHealth>
     {
         for (int i = 0; i < maxHealth; i++)
         {
-            if (i <= currentHealth - 1)
+            if (i < currentHealth)
             {
-                HealthContainer.GetChild(i).GetComponent<Image>().sprite = fullHealthImage;
+                HealthContainer.GetChild(i/2).GetComponent<Image>().sprite = fullHealthImage;
+            }
+            else if (i == currentHealth)
+            {
+                HealthContainer.GetChild(i/2).GetComponent<Image>().sprite = halfHealthImage;
             }
             else
             {
-                HealthContainer.GetChild(i).GetComponent<Image>().sprite = emptyHealthImage;
+                HealthContainer.GetChild(i/2).GetComponent<Image>().sprite = emptyHealthImage;
             }
-        }
-
-        if (currentHealth < maxHealth)
-        {
-            StartCoroutine(RefreshHealthRoutine());
         }
     }
 }
