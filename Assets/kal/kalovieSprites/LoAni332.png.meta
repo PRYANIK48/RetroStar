@@ -1,0 +1,617 @@
+fileFormatVersion: 2
+guid: fac151097cc98a948a0df39c1f91dae8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3519002829518614798
+    second: LoAni332_0
+  - first:
+      213: 1216839708713453974
+    second: LoAni332_1
+  - first:
+      213: 6334947917450333573
+    second: LoAni332_2
+  - first:
+      213: 3402738603581315277
+    second: LoAni332_3
+  - first:
+      213: 5571289206328515361
+    second: LoAni332_4
+  - first:
+      213: -8885979249212198416
+    second: LoAni332_5
+  - first:
+      213: -1604703372766506452
+    second: LoAni332_6
+  - first:
+      213: 8185957937842869120
+    second: LoAni332_7
+  - first:
+      213: 1987856417130918163
+    second: LoAni332_8
+  - first:
+      213: 5708754869056325747
+    second: LoAni332_9
+  - first:
+      213: -8126827602948388359
+    second: LoAni332_10
+  - first:
+      213: 5916044621506596553
+    second: LoAni332_11
+  - first:
+      213: -5225338693983500738
+    second: LoAni332_12
+  - first:
+      213: -2658818996812886168
+    second: LoAni332_13
+  - first:
+      213: 7495135566351594773
+    second: LoAni332_14
+  - first:
+      213: -1275101865484672860
+    second: LoAni332_15
+  - first:
+      213: -8591722686457341872
+    second: LoAni332_16
+  - first:
+      213: -8739563370176309888
+    second: LoAni332_17
+  - first:
+      213: -3359405918870588976
+    second: LoAni332_18
+  - first:
+      213: 5800095329408109742
+    second: LoAni332_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LoAni332_0
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 3103
+        width: 354
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e013d01dd6206d030800000000000000
+      internalID: 3519002829518614798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoAni332_1
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 3103
+        width: 338
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 699847a944513e010800000000000000
+      internalID: 1216839708713453974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoAni332_2
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 3103
+        width: 354
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58d4a3221914ae750800000000000000
+      internalID: 6334947917450333573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoAni332_3
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 3103
+        width: 338
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc819f14bb4f83f20800000000000000
+      internalID: 3402738603581315277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoAni332_4
+      rect:
+        serializedVersion: 2
+        x: 2063
+        y: 3087
+        width: 354
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12bdd24e302315d40800000000000000
+      internalID: 5571289206328515361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoAni332_5
+      rect:
+        serializedVersion: 2
+        x: 2607
+        y: 3103
+        width: 402
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f1f639e3f8aea480800000000000000
+      internalID: -8885979249212198416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoAni332_6
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 3087
+        width: 354
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c229168d8c2fab9e0800000000000000
+      internalID: -1604703372766506452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoAni332_7
+      rect:
+        serializedVersion: 2
+        x: 3647
+        y: 3103
+        width: 402
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 083d9679f5d5a9170800000000000000
+      internalID: 8185957937842869120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoAni332_8
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 2111
+        width: 370
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 311b19711e8469b10800000000000000
+      internalID: 1987856417130918163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoAni332_9
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 2079
+        width: 386
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37842ef9e42993f40800000000000000
+      internalID: 5708754869056325747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoAni332_10
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 2111
+        width: 370
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f90c675a55b73f80800000000000000
+      internalID: -8126827602948388359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoAni332_11
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 2095
+        width: 386
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cec24c1d330a1250800000000000000
+      internalID: 5916044621506596553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoAni332_12
+      rect:
+        serializedVersion: 2
+        x: 2063
+        y: 1983
+        width: 354
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e368202942edb77b0800000000000000
+      internalID: -5225338693983500738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoAni332_13
+      rect:
+        serializedVersion: 2
+        x: 2591
+        y: 2063
+        width: 418
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86f48ec953af91bd0800000000000000
+      internalID: -2658818996812886168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoAni332_14
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 1983
+        width: 354
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51578cf2612140860800000000000000
+      internalID: 7495135566351594773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoAni332_15
+      rect:
+        serializedVersion: 2
+        x: 3647
+        y: 2063
+        width: 418
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a0295feb9ded4ee0800000000000000
+      internalID: -1275101865484672860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoAni332_16
+      rect:
+        serializedVersion: 2
+        x: 2623
+        y: 1023
+        width: 370
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0589b01dcb114c880800000000000000
+      internalID: -8591722686457341872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoAni332_17
+      rect:
+        serializedVersion: 2
+        x: 3663
+        y: 1023
+        width: 354
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08510a44b65d6b680800000000000000
+      internalID: -8739563370176309888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoAni332_18
+      rect:
+        serializedVersion: 2
+        x: 2639
+        y: 15
+        width: 354
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d1bf5d9d1ef061d0800000000000000
+      internalID: -3359405918870588976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoAni332_19
+      rect:
+        serializedVersion: 2
+        x: 3679
+        y: 15
+        width: 338
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eacc5ccc8f31e7050800000000000000
+      internalID: 5800095329408109742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

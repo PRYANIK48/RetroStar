@@ -1,0 +1,542 @@
+fileFormatVersion: 2
+guid: 8e3b41baf8a36d74bbfa28556043ce00
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5148911901521643375
+    second: LoRS-Sprites_0
+  - first:
+      213: -3753092094325464154
+    second: LoRS-Sprites_1
+  - first:
+      213: 3341679937934807703
+    second: LoRS-Sprites_2
+  - first:
+      213: 8540670275910483815
+    second: LoRS-Sprites_3
+  - first:
+      213: -2485628945147154699
+    second: LoRS-Sprites_4
+  - first:
+      213: -8011397464018021523
+    second: LoRS-Sprites_5
+  - first:
+      213: 3850880447134391539
+    second: LoRS-Sprites_6
+  - first:
+      213: 6507133329894825648
+    second: LoRS-Sprites_7
+  - first:
+      213: 528652224725154994
+    second: LoRS-Sprites_8
+  - first:
+      213: 1550679149697440959
+    second: LoRS-Sprites_9
+  - first:
+      213: 1274843812821226962
+    second: LoRS-Sprites_10
+  - first:
+      213: 6864118888290692777
+    second: LoRS-Sprites_11
+  - first:
+      213: 1230901013929514295
+    second: LoRS-Sprites_12
+  - first:
+      213: 9131557719598731750
+    second: LoRS-Sprites_13
+  - first:
+      213: -1123537625722073322
+    second: LoRS-Sprites_14
+  - first:
+      213: 5084112593021100279
+    second: LoRS-Sprites_15
+  - first:
+      213: 8558668769658044751
+    second: LoRS-Sprites_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LoRS-Sprites_0
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 3103
+        width: 354
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f678af5281c947740800000000000000
+      internalID: 5148911901521643375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoRS-Sprites_1
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 3103
+        width: 338
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a3676cff965aebc0800000000000000
+      internalID: -3753092094325464154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoRS-Sprites_2
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 3103
+        width: 354
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79257a5d238006e20800000000000000
+      internalID: 3341679937934807703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoRS-Sprites_3
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 3103
+        width: 338
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76fb1639d5e868670800000000000000
+      internalID: 8540670275910483815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoRS-Sprites_4
+      rect:
+        serializedVersion: 2
+        x: 2063
+        y: 3087
+        width: 354
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fe2311d4a5418dd0800000000000000
+      internalID: -2485628945147154699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoRS-Sprites_5
+      rect:
+        serializedVersion: 2
+        x: 2607
+        y: 3103
+        width: 402
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d639db2e37cc1d090800000000000000
+      internalID: -8011397464018021523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoRS-Sprites_6
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 3087
+        width: 354
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fc51f32d53117530800000000000000
+      internalID: 3850880447134391539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoRS-Sprites_7
+      rect:
+        serializedVersion: 2
+        x: 3647
+        y: 3087
+        width: 402
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0be5c7a894bfd4a50800000000000000
+      internalID: 6507133329894825648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoRS-Sprites_8
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 2111
+        width: 370
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bc7670c566265700800000000000000
+      internalID: 528652224725154994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoRS-Sprites_9
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 2447
+        width: 18
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbc1256887e158510800000000000000
+      internalID: 1550679149697440959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoRS-Sprites_10
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 2079
+        width: 370
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d5505f71b721b110800000000000000
+      internalID: 1274843812821226962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoRS-Sprites_11
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 2111
+        width: 370
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aead90e2cf324f50800000000000000
+      internalID: 6864118888290692777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoRS-Sprites_12
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 2095
+        width: 386
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 735dfe853f9051110800000000000000
+      internalID: 1230901013929514295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoRS-Sprites_13
+      rect:
+        serializedVersion: 2
+        x: 2063
+        y: 2079
+        width: 354
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e198aa6d5fc9be70800000000000000
+      internalID: 9131557719598731750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoRS-Sprites_14
+      rect:
+        serializedVersion: 2
+        x: 2591
+        y: 2095
+        width: 418
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61fcc0f6b746860f0800000000000000
+      internalID: -1123537625722073322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoRS-Sprites_15
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 2095
+        width: 354
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f0ec1177756e8640800000000000000
+      internalID: 5084112593021100279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoRS-Sprites_16
+      rect:
+        serializedVersion: 2
+        x: 3647
+        y: 2095
+        width: 418
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4182b576ef76c670800000000000000
+      internalID: 8558668769658044751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

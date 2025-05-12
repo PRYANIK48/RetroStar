@@ -1,0 +1,3 @@
+Hey! 
+
+Here you can find the hit animations without the red hit filter, in case you want to add it yourself to the character with coding, shading etc.
