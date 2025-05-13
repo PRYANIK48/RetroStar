@@ -39,7 +39,7 @@ public class PlayerController : Singleton<PlayerController>
         _animator = GetComponent<Animator>();
         _spriteRender = GetComponent<SpriteRenderer>();
         _knockback = GetComponent<Knockback>();
-        _weapon = GetComponent<ActiveWeapon>();
+      //  _weapon = GetComponent<ActiveWeapon>();
     }
 
     private void Start() {
@@ -47,7 +47,7 @@ public class PlayerController : Singleton<PlayerController>
 
         _startingMoveSpeed = moveSpeed;
 
-        ActiveInventory.Instance.EquipStartingWeapon();
+        //ActiveInventory.Instance.EquipStartingWeapon();
     }
 
     private void OnEnable() {
@@ -75,7 +75,9 @@ public class PlayerController : Singleton<PlayerController>
     }
 
     private void Move() {
-        if (_knockback.GettingKnockedBack || PlayerHealth.Instance.IsDead || _weapon.CurrentActiveWeapon.IsAttacking) { return; }
+        if (_knockback.GettingKnockedBack || PlayerHealth.Instance.IsDead
+           // || _weapon.CurrentActiveWeapon.IsAttacking
+            ) { return; }
 
         _rb.MovePosition(_rb.position + _movement * (moveSpeed * Time.fixedDeltaTime));
 
