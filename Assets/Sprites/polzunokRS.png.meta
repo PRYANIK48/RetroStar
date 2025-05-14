@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b9e79466c9448d148bb864a529784c44
+guid: edc4711ed046295419f9a2de21ca15cb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8914778229347000034
-    second: Untitled 01-11-2025 07-10-11_0
+      213: 5594264283896655970
+    second: polzunokRS_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Untitled 01-11-2025 07-10-11_0
+      name: polzunokRS_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 256
+        x: 15
+        y: 527
+        width: 994
+        height: 146
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ee1d9b2197a7bb70800000000000000
-      internalID: 8914778229347000034
+      spriteID: 260b05df9b1d2ad40800000000000000
+      internalID: 5594264283896655970
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Untitled 01-11-2025 07-10-11_0: 8914778229347000034
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
