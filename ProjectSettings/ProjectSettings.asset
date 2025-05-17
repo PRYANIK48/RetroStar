@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: DefaultCompany
   productName: 2D Top Down RPG
-  defaultCursor: {fileID: 2800000, guid: 342ab7c8d359c6a4d8d0043d526db442, type: 3}
+  defaultCursor: {fileID: 2800000, guid: 858683746f4d3a94e9a29450cabbac74, type: 3}
   cursorHotspot: {x: 128, y: 128}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1

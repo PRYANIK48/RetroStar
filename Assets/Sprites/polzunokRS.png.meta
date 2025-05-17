@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      polzunokRS_0: 5594264283896655970
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
