@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags: []
   layers:
   - Default
@@ -41,3 +41,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: "\u0434\u0435\u0440\u0435\u0432\u044C\u044F \u0441\u043B\u043E\u0439 0"
+    uniqueID: 3875503909
+    locked: 0
+  - name: "\u0434\u0435\u0440\u0435\u0432\u044C\u044F \u0441\u043B\u043E\u0439 1"
+    uniqueID: 3600613459
+    locked: 0
+  - name: "\u043D\u0430\u0434 \u0438\u0433\u0440\u043E\u043A\u043E\u043C"
+    uniqueID: 2459424023
+    locked: 0
+  - name: "\u0438\u0433\u0440\u043E\u043A"
+    uniqueID: 2416189149
+    locked: 0
+  - name: New Layer 5
+    uniqueID: 1398107351
+    locked: 0
+  m_RenderingLayers:
+  - Default
