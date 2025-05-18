@@ -733,7 +733,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 169417717}
-  - component: {fileID: 169417718}
   m_Layer: 5
   m_Name: LogoRoot
   m_TagString: Untagged
@@ -757,28 +756,6 @@ Transform:
   - {fileID: 280036698}
   m_Father: {fileID: 208029894}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &169417718
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169417716}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 83bed3159d653e049aaa464392edd92e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &181731702
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,10 +969,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 208029893}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 519420033}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1016,7 +993,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 208029893}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -1028,10 +1005,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 519420033}
-        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
-        m_MethodName: PlaySound
-        m_Mode: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3239,6 +3216,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 519420033}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 208029893}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -3262,30 +3251,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 519420033}
-        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
-        m_MethodName: PlaySound
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &717052419
 MonoBehaviour:
@@ -3408,6 +3373,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 2024703506}
+        m_TargetAssemblyTypeName: SceneTransition, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Scene1
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 519420033}
         m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
         m_MethodName: PlaySound
@@ -3419,18 +3396,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1138745548}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &727763618
 MonoBehaviour:
@@ -3689,10 +3654,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 208029893}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 519420033}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3713,7 +3678,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 208029893}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -3725,10 +3690,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 519420033}
-        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
-        m_MethodName: PlaySound
-        m_Mode: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4171,8 +4136,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -32.4, y: -100.8}
-  m_SizeDelta: {x: 1064.79, y: 49.2}
+  m_AnchoredPosition: {x: 25.95, y: -77}
+  m_SizeDelta: {x: 1534.08, y: 49.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &853447418
 MonoBehaviour:
@@ -4207,15 +4172,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0441\u0442\u044B \u0438
-    \u0422\u0435\u0445\u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u0438:\n\n\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0441\u0442
-    \u043F\u0440\u043E\u0433\u0435\u0440\u043E\u0432\u0438\u0447 \u043F\u0440\u043E\u0433\u0435\u0440\n\n\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0441\u0442
-    \u043F\u0440\u043E\u0433\u0435\u0440\u043E\u0432\u0438\u0447 \u043F\u0440\u043E\u0433\u0435\u0440\n\n\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0441\u0442
-    \u043F\u0440\u043E\u0433\u0435\u0440\u043E\u0432\u0438\u0447 \u043F\u0440\u043E\u0433\u0435\u0440\n\n\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0441\u0442
-    \u043F\u0440\u043E\u0433\u0435\u0440\u043E\u0432\u0438\u0447 \u043F\u0440\u043E\u0433\u0435\u0440\n\n\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0441\u0442
-    \u043F\u0440\u043E\u0433\u0435\u0440\u043E\u0432\u0438\u0447 \u043F\u0440\u043E\u0433\u0435\u0440\n\n\u0425\u0443\u0434\u043E\u0436\u043D\u0438\u043A\u0438:\n\n\u0445\u0443\u0436\u043E\u0436\u043D\u0438\u043A_1\n\n\u0445\u0443\u0434\u043E\u0436\u043D\u0438\u0447\u0435\u043A_2\n\n\u0445\u0443\u0434\u043E\u0436\u0435\u0440_3\n\n\u041C\u0443\u0437\u044B\u043A\u0430
-    \u0438 \u0417\u0432\u0443\u043A\u0438:\n\u043E\u0437\u0432\u0443\u0447\u043A\u0435\u0440_\u043A\u0440\u0443\u0442\u043E\u0438\n\n\u041E\u0437\u0432\u0443\u0447\u043A\u0435\u04402\n\n\u041C\u0443\u0437\u044B\u043A\u0430\u043D\u0442\u0438\u043A\n\n\u041A\u0430\u043A\u043E\u0439\u0442\u043E
-    \u043C\u0443\u0436\u0438\u043A:\n\u0420\u043E\u043C\u0430\u043D \u0424\u0438\u043B\u044C\u0447\u0435\u043D\u043A\u043E\u0432(\u041B\u043E\u043B\u043E\u043B\u043E\u0448\u043A\u0430)\n"
+  m_Text: "\u0410\u0432\u0442\u043E\u0440 \u0438\u0434\u0435\u0438,\u043C\u0435\u043D\u0435\u0434\u0436\u0435\u0440:\r\n\nKvolm(https://www.youtube.com/@Kvolm
+    )\r\n\n\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0441\u0442\u044B:\r\n\nDragonGPT(https://www.youtube.com/@Lephtoks
+    \n)\r\n\nDarkNiobium(https://t.me/darkniobium )\r\n\n\u0410\u043D\u0434\u0440\u0435\u0439
+    \u0427\u0430\u0439\u2615\uFE0F\U0001F331(https://t.me/littlebigcoder)\r\n\n\u0410\u043B\u0435\u043A\u0441\u0430\u043D\u0434\u0440(https://t.me/para_system)\r\n\n\u041C\u0438\u0448\u0430
+    \u041C\u0430\u043D\u0443\u0439\u043B\u043E\u0432(https://t.me/Chertila_W)\r\n\n\u041D\u0438\u043A\u0438\u0442\u0430
+    \u041B\u0443\u0431\u0435\u043D\u0435\u0446\u044C(https://t.me/JossttreiT)\r\n\n\u0425\u0443\u0434\u043E\u0436\u043D\u0438\u043A\u0438:\r\n\nBrandy
+    Hombre de p\xF3quer(https://t.me/Muerteporalcohol)\r\n\nUgog(https://t.me/ugogs_basement)\r\n\n\u041C\u0443\u0437\u044B\u043A\u0430\u043D\u0442\u044B:\r\n\n\u0420\u0435\u0430\u043B(https://t.me/Igoryanreal)\r\n\nBlaze
+    Games(https://t.me/BlazeCrafts)\r\n\nAbra(https://t.me/abragay)\r\n\n\u041F\u0435\u0440\u0435\u0432\u043E\u0434/\u0421\u041C\u041C:\r\n\n\u0411\u0438\u043A\u0435\u043B\u044C\u0442(https://youtube.com/@b1k3lt?si=UGB6i4cwLZe5gH46)\r\n\n\u0418\u0433\u0440\u0430
+    \u043F\u043E \u043C\u043E\u0442\u0438\u0432\u0430\u043C \u043A\u0430\u043D\u0430\u043B\u0430:\r\n\n\u0420\u043E\u043C\u0430\u043D
+    \u0424\u0438\u043B\u044C\u0447\u0435\u043D\u043A\u043E\u0432[\u041B\u043E\u043B\u043E\u043B\u043E\u0448\u043A\u0430](
+    https://www.youtube.com/@MrLololoshka)\r\n"
 --- !u!222 &853447419
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8503,7 +8470,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 1485465557}
   fadeDuration: 1
-  sceneToLoad: Scene1
 --- !u!4 &2024703507
 Transform:
   m_ObjectHideFlags: 0
@@ -8951,7 +8917,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 1523594813}
-  - {fileID: 2024703507}
   - {fileID: 67992770}
   - {fileID: 230849502}
   - {fileID: 619394802}
+  - {fileID: 2024703507}

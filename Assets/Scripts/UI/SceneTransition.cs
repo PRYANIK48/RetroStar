@@ -7,8 +7,6 @@ public class SceneTransition : MonoBehaviour
 {
     public Image fadeImage;
     public float fadeDuration = 1f; 
-    public string sceneToLoad; 
-
     private void Start()
     {
         
@@ -16,12 +14,12 @@ public class SceneTransition : MonoBehaviour
     }
 
     
-    public void OnButtonClick()
+    public void ChangeScene(string SceneName)
     {
-        StartCoroutine(LoadSceneWithTransition());
+        StartCoroutine(LoadSceneWithTransition(SceneName));
     }
 
-    private IEnumerator LoadSceneWithTransition()
+    private IEnumerator LoadSceneWithTransition(string SceneName)
     {
         
         fadeImage.gameObject.SetActive(true);
@@ -30,7 +28,7 @@ public class SceneTransition : MonoBehaviour
         yield return StartCoroutine(FadeToBlack());
 
         
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneToLoad);
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(SceneName);
         asyncOperation.allowSceneActivation = false;
 
         while (!asyncOperation.isDone)
@@ -65,7 +63,7 @@ public class SceneTransition : MonoBehaviour
     {
         float elapsedTime = 0f;
 
-        
+
         while (elapsedTime < fadeDuration)
         {
             elapsedTime += Time.deltaTime;
@@ -73,15 +71,7 @@ public class SceneTransition : MonoBehaviour
             yield return null;
         }
 
-        
-        fadeImage.gameObject.SetActive(false);
-    }
 
-    
-    public void TransitionImmediately()
-    {
-        fadeImage.gameObject.SetActive(true);
-        StartCoroutine(FadeToBlack());
-        SceneManager.LoadScene(sceneToLoad);
+        fadeImage.gameObject.SetActive(false);
     }
 }
