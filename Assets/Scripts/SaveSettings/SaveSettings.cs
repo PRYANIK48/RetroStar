@@ -24,8 +24,8 @@ public class SaveSettings : MonoBehaviour
 
     void Update()
     {
-        settingsData.VolumeSetting = VolumeValue.Volume; // Обновляем текущую громкость
-        settingsData.Background = Background;            // Обновляем фон
+        settingsData.VolumeSetting = VolumeValue.Volume;
+        settingsData.Background = Background;            
         SaveSettingsToFile();
     }
 
