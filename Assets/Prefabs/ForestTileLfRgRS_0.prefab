@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6682766727105462672}
   - component: {fileID: 2117586335546050892}
   - component: {fileID: 5501174193843386258}
-  - component: {fileID: 7142693238172237678}
   - component: {fileID: 2073340161725294537}
   m_Layer: 0
   m_Name: ForestTileLfRgRS_0
@@ -249,18 +248,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transparencyAmount: 0.8
   fadeTime: 0.4
---- !u!114 &7142693238172237678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4442812365272889193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d75ca753281da96409d7d71c7ae40be9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2073340161725294537
 MonoBehaviour:
   m_ObjectHideFlags: 0
