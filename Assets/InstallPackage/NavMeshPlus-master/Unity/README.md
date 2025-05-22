@@ -1,4 +1,4 @@
-> Please use the branch matching the version of your Unity editor: [master](../../tree/master) for the latest released version, [2018.3](../../tree/2018.3), [2018.2](../../tree/2018.2), [2018.1](../../tree/2018.1), [2017.2](../../tree/2017.2) for up to 2017.4-LTS, [2017.1](../../tree/2017.1), [5.6](../../tree/5.6).
+  > Please use the branch matching the version of your Unity editor: [master](../../tree/master) for the latest released version, [2018.3](../../tree/2018.3), [2018.2](../../tree/2018.2), [2018.1](../../tree/2018.1), [2017.2](../../tree/2017.2) for up to 2017.4-LTS, [2017.1](../../tree/2017.1), [5.6](../../tree/5.6).
 
 # Components for Runtime NavMesh Building
 
@@ -58,3 +58,62 @@ A: No - you can still use OffMeshLink - however you'll find that NavMeshLink is 
 
 Q: What happened to HeightMesh and Auto Generated OffMeshLinks?  
 A: They're not supported in the new NavMesh building feature. HeightMesh will be added at some point. Auto OffMeshLink generation will possibly be replaced with a solution that allows better control of placement.
+
+
+
+
+
+using UnityEngine;
+using UnityEngine.AI;
+
+public class ZombieAI : MonoBehaviour
+{
+    public Transform target;
+    public float detectionRange = 6f;
+
+    private NavMeshAgent agent;
+    private Animator animator;
+
+    void Start()
+    {
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+
+        animator = GetComponent<Animator>();
+
+        if (target == null)
+        {
+            target = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+    }
+
+    void Update()
+    {
+        float distance = Vector2.Distance(transform.position, target.position);
+
+        if (distance <= detectionRange)
+        {
+            agent.SetDestination(target.position);
+        }
+        else
+        {
+            agent.ResetPath();
+        }
+
+        UpdateAnimation();
+    }
+
+    void UpdateAnimation()
+    {
+        Vector2 velocity = agent.velocity;
+
+        animator.SetBool("isMoving", velocity.magnitude > 0.1f);
+
+        if (velocity.magnitude > 0.1f)
+        {
+            animator.SetFloat("moveX", velocity.normalized.x);
+            animator.SetFloat("moveY", velocity.normalized.y);
+        }
+    }
+}

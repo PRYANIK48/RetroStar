@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa0352a4d56abd42ad2fc69deb72448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Size: {x: 4.5218773, y: 17.844543, z: 4}
-  m_Center: {x: -6.175562, y: -0.1017437, z: 0}
-  m_Area: 0
+  m_Size: {x: 16.564417, y: 17.844543, z: 4}
+  m_Center: {x: -0.1542921, y: -0.1017437, z: 0}
+  m_Area: 1
   m_AffectedAgents: ffffffff
