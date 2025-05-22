@@ -459,7 +459,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EngeneerZombieRS_0: -8587795062923345574
+      EngeneerZombieRS_1: -7907823544611399156
+      EngeneerZombieRS_10: 7363226652269545588
+      EngeneerZombieRS_11: -4065291124412442962
+      EngeneerZombieRS_12: 8962757178984224489
+      EngeneerZombieRS_13: -7400605126816991564
+      EngeneerZombieRS_2: -6251616699419414238
+      EngeneerZombieRS_3: 7658921236497676049
+      EngeneerZombieRS_4: 8454004836612315800
+      EngeneerZombieRS_5: 133758805866930681
+      EngeneerZombieRS_6: -1175203265121530128
+      EngeneerZombieRS_7: 9066456439086237735
+      EngeneerZombieRS_8: 7955293873143123827
+      EngeneerZombieRS_9: 3576737678315312264
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

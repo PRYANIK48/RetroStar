@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DoorsInTavernRS_0: 4257523342446075353
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

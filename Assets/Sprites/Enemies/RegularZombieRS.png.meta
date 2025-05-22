@@ -459,7 +459,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RegularZombieRS_0: -754148884192751316
+      RegularZombieRS_1: -6923091972514969797
+      RegularZombieRS_10: 5394069702747010200
+      RegularZombieRS_11: -2572327895074717565
+      RegularZombieRS_12: 7744533402129620270
+      RegularZombieRS_13: 1752263222251503093
+      RegularZombieRS_2: 7965640609975492127
+      RegularZombieRS_3: 5841334465224619362
+      RegularZombieRS_4: 5030522919866904129
+      RegularZombieRS_5: -8729477533320790016
+      RegularZombieRS_6: 7249024045048169842
+      RegularZombieRS_7: -4608318519503334191
+      RegularZombieRS_8: 106846082872514089
+      RegularZombieRS_9: 4802129426568311858
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
