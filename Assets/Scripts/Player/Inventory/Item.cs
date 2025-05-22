@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Player;
+using UnityEngine;
 
 [System.Serializable]
 public class Item : MonoBehaviour
@@ -10,7 +11,7 @@ public class Item : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.GetComponent<PlayerController>())
+        if (other.GetComponent<PlayerEntity>())
         {
             Inventory.instance.AddItem(this);
         }

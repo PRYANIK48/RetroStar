@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Player;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class InteractableObject : MonoBehaviour
@@ -20,7 +21,7 @@ public class InteractableObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.GetComponent<PlayerController>())
+        if (other.GetComponent<PlayerEntity>())
         {
             isPlayerNear = true;
             hint.SetActive(true);
@@ -29,7 +30,7 @@ public class InteractableObject : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.GetComponent<PlayerController>())
+        if (other.GetComponent<PlayerEntity>())
         {
             isPlayerNear = false;
             hint.SetActive(false);

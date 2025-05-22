@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Player;
 using TMPro;
 
 public class Inventory : MonoBehaviour
@@ -154,7 +155,7 @@ public class Inventory : MonoBehaviour
                 itemStacks.Remove(item);
             }
 
-            Item droppedItem = Instantiate(item, PlayerController.Instance.GetComponentInChildren<DropPoint>().transform.position, Quaternion.identity);
+            Item droppedItem = Instantiate(item, PlayerEntity.instance.gameObject.transform.position, Quaternion.identity);
             droppedItem.gameObject.SetActive(true);
             droppedItem.currentStack = 1;
 

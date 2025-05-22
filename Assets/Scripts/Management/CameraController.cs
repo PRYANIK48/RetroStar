@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using Player;
 
 public class CameraController : Singleton<CameraController>
 {
@@ -13,6 +14,6 @@ public class CameraController : Singleton<CameraController>
 
     public void SetPlayerCameraFollow() {
         cinemachineVirtualCamera = FindFirstObjectByType<CinemachineVirtualCamera>();
-        cinemachineVirtualCamera.Follow = PlayerController.Instance.transform;
+        cinemachineVirtualCamera.Follow = PlayerEntity.instance.transform;
     }
 }
