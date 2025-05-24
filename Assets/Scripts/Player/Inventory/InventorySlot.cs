@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Item;
+using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
@@ -6,44 +7,30 @@ public class InventorySlot : MonoBehaviour
 {
     public Image icon;
     public TMP_Text countText;
-    private Item storedItem;
-    private int stackSize = 0;
+    private ItemStack itemStack;
 
     public GameObject selectionFrame;
 
-    public void SetItem(Item newItem, int count)
+    public void SetItem(ItemStack stack)
     {
-        storedItem = newItem;
-        stackSize = count;
-        icon.sprite = newItem.itemIcon;
+        itemStack = stack;
+        icon.sprite = stack.ItemType.Sprite;
         icon.enabled = true;
-        UpdateStackText();
-    }
-
-    public void IncreaseStack(int amount)
-    {
-        stackSize += amount;
-        UpdateStackText();
-    }
-
-    public void DecreaseStack(int amount)
-    {
-        stackSize -= amount;
         UpdateStackText();
     }
 
     public void ClearSlot()
     {
-        storedItem = null;
-        stackSize = 0;
+        itemStack = null;
         icon.sprite = null;
         icon.enabled = false;
         countText.text = "";
     }
 
-    private void UpdateStackText()
+    public void UpdateStackText()
     {
-        countText.text = stackSize > 1 ? stackSize.ToString() : "";
+        if (itemStack == null) return;
+        countText.text = itemStack.Count > 1 ? itemStack.Count.ToString() : "";
     }
 
     public void SetHighlight(bool isActive)

@@ -1,17 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Item;
 using Player;
 using TMPro;
 
 public class Inventory : MonoBehaviour
 {
     public static Inventory instance;
-    public Transform dropPoint;
-
+    
+    public DroppedItem EmptyItemPrefab;
+    
     public InventorySlot[] slots;
-    private List<Item> items = new List<Item>();
-    private Dictionary<Item, int> itemStacks = new Dictionary<Item, int>();
+    private List<ItemStack> items = new List<ItemStack>();
 
     public AudioSource audioSource;
     public AudioClip pickupSound;
@@ -99,22 +100,23 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void AddItem(Item item)
+    public void AddItem(ItemStack item)
     {
         for (int i = 0; i < items.Count; i++)
         {
-            if (items[i].itemName == item.itemName && item.maxStack > 1)
+            if (items[i].ItemType == item.ItemType && item.ItemType.MaxStack > 1)
             {
-                int availableSpace = items[i].maxStack - itemStacks[items[i]];
+                int availableSpace = items[i].ItemType.MaxStack - items[i].Count;
                 if (availableSpace > 0)
                 {
-                    int toAdd = Mathf.Min(availableSpace, item.currentStack);
-                    itemStacks[items[i]] += toAdd;
-                    slots[i].IncreaseStack(toAdd);
-                    item.gameObject.SetActive(false);
+                    int toAdd = Mathf.Min(availableSpace, item.Count);
+                    items[i].Count += toAdd;
+                    
+                    slots[i].UpdateStackText();
+                    
 
                     PlaySound(pickupSound);
-                    ShowPickupText(item.itemName);
+                    ShowPickupText(item.ItemType.Name);
                     return;
                 }
             }
@@ -123,12 +125,10 @@ public class Inventory : MonoBehaviour
         if (items.Count < slots.Length)
         {
             items.Add(item);
-            itemStacks[item] = item.currentStack;
             UpdateUI();
-            item.gameObject.SetActive(false);
 
             PlaySound(pickupSound);
-            ShowPickupText(item.itemName);
+            ShowPickupText(item.ItemType.Name);
         }
         else
         {
@@ -136,28 +136,27 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void DropItem(Item item)
+    public void DropItem(ItemStack item)
     {
         if (items.Contains(item))
         {
-            if (itemStacks[item] > 1)
+            if (item.Count > 1)
             {
-                itemStacks[item]--;
-                int index = items.FindIndex(i => i == item);
+                item.Count--;
+                int index = items.FindIndex(i => i.Equals(item));
                 if (index != -1)
                 {
-                    slots[index].DecreaseStack(1);
+                    slots[index].UpdateStackText();
                 }
             }
             else
             {
                 items.Remove(item);
-                itemStacks.Remove(item);
             }
 
-            Item droppedItem = Instantiate(item, PlayerEntity.instance.gameObject.transform.position, Quaternion.identity);
-            droppedItem.gameObject.SetActive(true);
-            droppedItem.currentStack = 1;
+            DroppedItem droppedItem = Instantiate(EmptyItemPrefab, PlayerEntity.instance.gameObject.transform.position, Quaternion.identity);
+            droppedItem.LoadItemStack(item);
+            droppedItem.Count = 1;
 
             PlaySound(dropSound);
             UpdateUI();
@@ -210,7 +209,7 @@ public class Inventory : MonoBehaviour
         for (int i = 0; i < slots.Length; i++)
         {
             if (i < items.Count)
-                slots[i].SetItem(items[i], itemStacks[items[i]]);
+                slots[i].SetItem(items[i]);
             else
                 slots[i].ClearSlot();
         }
