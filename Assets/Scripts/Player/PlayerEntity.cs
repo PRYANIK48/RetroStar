@@ -11,7 +11,10 @@ namespace Player
     public class PlayerEntity : MonoBehaviour
     {
         public static PlayerEntity instance;
-        
+
+        //Режим разработчика
+        public bool isDev = false;
+
         public float Health {private set; get;}
         private float maxHealth;
         
@@ -99,6 +102,11 @@ namespace Player
         public void Damage(float amount)
         {
             Health = Math.Max(Health - amount, 0);
+            
+            if (Health <= 0)
+            {
+                //смэртб
+            }
         }
 
         public void Heal(float amount)
