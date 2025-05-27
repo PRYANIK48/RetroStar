@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
@@ -6,72 +6,19 @@ using System.Collections;
 public class SceneTransition : MonoBehaviour
 {
     public Image fadeImage;
-    public float fadeDuration = 1f; 
-    private void Start()
-    {
-        
-        fadeImage.gameObject.SetActive(false);
-    }
 
-    
-    public void ChangeScene(string SceneName)
+    public void ChangeScene(string sceneName)
     {
-        StartCoroutine(LoadSceneWithTransition(SceneName));
+        StartCoroutine(TransitionFadeOut(sceneName));
     }
-
-    private IEnumerator LoadSceneWithTransition(string SceneName)
+    private IEnumerator TransitionFadeOut(string sceneName)
     {
-        
         fadeImage.gameObject.SetActive(true);
-
-        
-        yield return StartCoroutine(FadeToBlack());
-
-        
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(SceneName);
-        asyncOperation.allowSceneActivation = false;
-
-        while (!asyncOperation.isDone)
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(sceneName);
+        if (fadeImage != null )
         {
-           
-            if (asyncOperation.progress >= 0.9f)
-            {
-                
-                asyncOperation.allowSceneActivation = true;
-            }
-
-            yield return null;
+            fadeImage.gameObject.SetActive(false);
         }
-
-        yield return StartCoroutine(FadeToClear());
-    }
-
-    private IEnumerator FadeToBlack()
-    {
-        float elapsedTime = 0f;
-
-        
-        while (elapsedTime < fadeDuration)
-        {
-            elapsedTime += Time.deltaTime;
-            fadeImage.color = new Color(0, 0, 0, Mathf.Clamp01(elapsedTime / fadeDuration));
-            yield return null;
-        }
-    }
-
-    private IEnumerator FadeToClear()
-    {
-        float elapsedTime = 0f;
-
-
-        while (elapsedTime < fadeDuration)
-        {
-            elapsedTime += Time.deltaTime;
-            fadeImage.color = new Color(0, 0, 0, 1 - Mathf.Clamp01(elapsedTime / fadeDuration));
-            yield return null;
-        }
-
-
-        fadeImage.gameObject.SetActive(false);
     }
 }

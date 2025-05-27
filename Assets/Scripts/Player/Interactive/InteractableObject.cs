@@ -33,12 +33,15 @@ public class InteractableObject : MonoBehaviour
         if (other.GetComponent<PlayerEntity>())
         {
             isPlayerNear = false;
-            hint.SetActive(false);
         }
     }
 
     private void Update()
     {
+        if (!isPlayerNear)
+        {
+            hint.SetActive(false);
+        }
         if (isPlayerNear && Input.GetKeyDown(interactionKey))
         {
             OnInteraction.Invoke();
