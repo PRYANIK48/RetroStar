@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Player;
+using Player.Inventory;
 using UnityEngine;
 
 namespace Item
@@ -61,7 +62,7 @@ namespace Item
 
         private void PickUp()
         {
-            Inventory.instance.AddItem(IntoItemStack());
+            PlayerEntity.instance.PickUpItem(IntoItemStack());
             Destroy(gameObject);
         }
 

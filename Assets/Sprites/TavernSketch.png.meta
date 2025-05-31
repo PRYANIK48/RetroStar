@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TavernSketch_0: -3804174786380271067
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

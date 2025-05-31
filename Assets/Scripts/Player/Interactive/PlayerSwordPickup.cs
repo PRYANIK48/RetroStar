@@ -1,4 +1,6 @@
 ﻿using Item;
+using Player;
+using Player.Inventory;
 using UnityEngine;
 
 public class SwordPickup : MonoBehaviour
@@ -13,7 +15,7 @@ public class SwordPickup : MonoBehaviour
         {
             used = true;
             spriteRenderer.sprite = stoneWithoutSword;
-            Inventory.instance.AddItem(new ItemStack(swordItem, 1)); 
+            PlayerEntity.instance.PickUpItem(new ItemStack(swordItem, 1)); 
         }
     }
 }

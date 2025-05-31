@@ -1,25 +1,18 @@
 using System;
 using UnityEngine;
 
-public class MainInputManager : MonoBehaviour
+public static class MainInputManager
 {
-    public static MainInputSystem InputSystem { private set; get; }
+    public static readonly MainInputSystem InputSystem = new MainInputSystem();
 
-    private void Awake()
+    static MainInputManager()
     {
-        if (InputSystem != null) return;
-        
-        
-        InputSystem = new MainInputSystem();
         InputSystem.Enable();
     }
+    
+    public static void Awake() { }
     public static void Dispose()
     {
         InputSystem.Dispose();
-    }
-
-    private void OnApplicationQuit()
-    {
-        Dispose();
     }
 }

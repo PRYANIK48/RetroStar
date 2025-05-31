@@ -1,4 +1,8 @@
 using System;
+using Item;
+using JetBrains.Annotations;
+using Player.Inventory;
+using Player.Inventory.InventoryGUI;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -44,18 +48,60 @@ namespace Player
         // Анимация
         
         private Animator animator;
-        
+
         private static readonly int moveXHash = Animator.StringToHash("moveX"); 
         private static readonly int moveYHash = Animator.StringToHash("moveY"); 
         private static readonly int dirXHash = Animator.StringToHash("lastX"); 
         private static readonly int dirYHash = Animator.StringToHash("lastY");
+        
+        // Инвентарь
+        
+        [CanBeNull] private InventoryGUI inventoryGUI => InventoryGUI.instance.gameObject.activeInHierarchy ? InventoryGUI.instance : null;
+
+        [CanBeNull] private Inventory.Inventory inventory => Inventory.Inventory.instance.gameObject.activeInHierarchy ? Inventory.Inventory.instance : null;
+
+        private AudioClip dropSound;
+        private AudioClip pickupSound;
+        
+        public DroppedItem EmptyItemPrefab;
+        
+        // Звуки
+        
+        private AudioSource audioSource;
 
         protected void Awake()
         {
             instance = this;
-            
             animator = GetComponent<Animator>();
+            audioSource = GetComponent<AudioSource>();
             rb = GetComponent<Rigidbody2D>();
+            
+            pickupSound = Resources.Load<AudioClip>("Audio/Take");
+            dropSound = Resources.Load<AudioClip>("Audio/drop");
+        }
+
+        private void OnEnable()
+        {
+            MainInputManager.InputSystem.BlockInDialogs.OpenInventory.performed += ChangeInventoryState;
+            MainInputManager.InputSystem.PlayerMap.DropItem.performed += DropItemEvent;
+        }
+        private void OnDisable()
+        {
+            MainInputManager.InputSystem.BlockInDialogs.OpenInventory.performed -= ChangeInventoryState;
+            MainInputManager.InputSystem.PlayerMap.DropItem.performed -= DropItemEvent;
+            
+        }
+
+        private void DropItemEvent(InputAction.CallbackContext obj)
+        {
+            inventory?.HandleDropInput();
+        }
+
+
+        private void ChangeInventoryState(InputAction.CallbackContext callbackContext)
+        {
+            Inventory.Inventory.instance.gameObject.SetActive(InventoryGUI.instance.gameObject.activeSelf);
+            InventoryGUI.instance.gameObject.SetActive(!InventoryGUI.instance.gameObject.activeSelf);
         }
 
         protected void Update()
@@ -86,6 +132,8 @@ namespace Player
 
         private void Start()
         {
+            inventoryGUI?.gameObject.SetActive(false);
+            
             actionMap = MainInputManager.InputSystem.PlayerMap;
             
             this.energy = this.maxEnergy;
@@ -122,6 +170,61 @@ namespace Player
         public void SetEnergy(float amount)
         {
             energy = amount;
+        }
+        
+        
+        
+        // Inventory
+
+        public void PickUpItem(ItemStack item)
+        {
+            if (InventoryStorage.instance.AddItem(item, out var dropped))
+            {
+                PlaySound(pickupSound);
+                inventory?.ShowPickupText(item.ItemType.Name);
+                
+                inventory?.UpdateHotbarUI();
+
+                inventoryGUI?.UpdateSlots();
+            }
+            else
+            {
+                Debug.Log("Инвентарь заполнен!");
+            }
+        }
+
+        public void DropItem(int index)
+        {
+            var item = InventoryStorage.instance.GetItem(index);
+            if (item == null) return; 
+            
+            if (item.Count <= 1) InventoryStorage.instance.SetItem(index, null);
+            else
+            {
+                item.Count -= 1;
+            }
+            DropItem(item);
+            
+            inventory?.UpdateHotbarUI();
+
+            inventoryGUI?.UpdateSlots();
+        }
+
+        public void DropItem(ItemStack item)
+        {
+            DroppedItem droppedItem = Instantiate(EmptyItemPrefab, PlayerEntity.instance.gameObject.transform.position, Quaternion.identity);
+            droppedItem.LoadItemStack(item);
+            droppedItem.Count = 1;
+
+            PlaySound(dropSound);
+        }
+
+        private void PlaySound(AudioClip clip)
+        {
+            if (audioSource != null && clip != null)
+            {
+                audioSource.PlayOneShot(clip);
+            }
         }
     }
 }
