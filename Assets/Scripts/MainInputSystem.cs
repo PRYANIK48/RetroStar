@@ -35,6 +35,15 @@ public partial class @MainInputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""DropItem"",
+                    ""type"": ""Button"",
+                    ""id"": ""b5f2e22a-b8c0-438c-8955-3279a6fb650c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -147,6 +156,73 @@ public partial class @MainInputSystem: IInputActionCollection2, IDisposable
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""713c1b55-10d8-4100-ae37-cf7302bbe406"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DropItem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""UI"",
+            ""id"": ""065d3df0-506d-48fa-9e2d-9626c9f575fa"",
+            ""actions"": [
+                {
+                    ""name"": ""MousePosition"",
+                    ""type"": ""Value"",
+                    ""id"": ""7ec96807-3902-465d-b429-5384cde2c301"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""3864b490-5fb8-43a6-8ef5-f946f7216587"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MousePosition"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""BlockInDialogs"",
+            ""id"": ""cc46bfdc-4e34-452e-b004-e3129194c53f"",
+            ""actions"": [
+                {
+                    ""name"": ""Open Inventory"",
+                    ""type"": ""Button"",
+                    ""id"": ""bd402826-1061-40ff-a3cb-3c448b91e190"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""935cad56-96b3-4d95-b2c6-2f16ec4f2218"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Open Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -156,11 +232,20 @@ public partial class @MainInputSystem: IInputActionCollection2, IDisposable
         // PlayerMap
         m_PlayerMap = asset.FindActionMap("PlayerMap", throwIfNotFound: true);
         m_PlayerMap_Movement = m_PlayerMap.FindAction("Movement", throwIfNotFound: true);
+        m_PlayerMap_DropItem = m_PlayerMap.FindAction("DropItem", throwIfNotFound: true);
+        // UI
+        m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
+        m_UI_MousePosition = m_UI.FindAction("MousePosition", throwIfNotFound: true);
+        // BlockInDialogs
+        m_BlockInDialogs = asset.FindActionMap("BlockInDialogs", throwIfNotFound: true);
+        m_BlockInDialogs_OpenInventory = m_BlockInDialogs.FindAction("Open Inventory", throwIfNotFound: true);
     }
 
     ~@MainInputSystem()
     {
         UnityEngine.Debug.Assert(!m_PlayerMap.enabled, "This will cause a leak and performance issues, MainInputSystem.PlayerMap.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, MainInputSystem.UI.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_BlockInDialogs.enabled, "This will cause a leak and performance issues, MainInputSystem.BlockInDialogs.Disable() has not been called.");
     }
 
     public void Dispose()
@@ -223,11 +308,13 @@ public partial class @MainInputSystem: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_PlayerMap;
     private List<IPlayerMapActions> m_PlayerMapActionsCallbackInterfaces = new List<IPlayerMapActions>();
     private readonly InputAction m_PlayerMap_Movement;
+    private readonly InputAction m_PlayerMap_DropItem;
     public struct PlayerMapActions
     {
         private @MainInputSystem m_Wrapper;
         public PlayerMapActions(@MainInputSystem wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_PlayerMap_Movement;
+        public InputAction @DropItem => m_Wrapper.m_PlayerMap_DropItem;
         public InputActionMap Get() { return m_Wrapper.m_PlayerMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -240,6 +327,9 @@ public partial class @MainInputSystem: IInputActionCollection2, IDisposable
             @Movement.started += instance.OnMovement;
             @Movement.performed += instance.OnMovement;
             @Movement.canceled += instance.OnMovement;
+            @DropItem.started += instance.OnDropItem;
+            @DropItem.performed += instance.OnDropItem;
+            @DropItem.canceled += instance.OnDropItem;
         }
 
         private void UnregisterCallbacks(IPlayerMapActions instance)
@@ -247,6 +337,9 @@ public partial class @MainInputSystem: IInputActionCollection2, IDisposable
             @Movement.started -= instance.OnMovement;
             @Movement.performed -= instance.OnMovement;
             @Movement.canceled -= instance.OnMovement;
+            @DropItem.started -= instance.OnDropItem;
+            @DropItem.performed -= instance.OnDropItem;
+            @DropItem.canceled -= instance.OnDropItem;
         }
 
         public void RemoveCallbacks(IPlayerMapActions instance)
@@ -264,8 +357,109 @@ public partial class @MainInputSystem: IInputActionCollection2, IDisposable
         }
     }
     public PlayerMapActions @PlayerMap => new PlayerMapActions(this);
+
+    // UI
+    private readonly InputActionMap m_UI;
+    private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
+    private readonly InputAction m_UI_MousePosition;
+    public struct UIActions
+    {
+        private @MainInputSystem m_Wrapper;
+        public UIActions(@MainInputSystem wrapper) { m_Wrapper = wrapper; }
+        public InputAction @MousePosition => m_Wrapper.m_UI_MousePosition;
+        public InputActionMap Get() { return m_Wrapper.m_UI; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(UIActions set) { return set.Get(); }
+        public void AddCallbacks(IUIActions instance)
+        {
+            if (instance == null || m_Wrapper.m_UIActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_UIActionsCallbackInterfaces.Add(instance);
+            @MousePosition.started += instance.OnMousePosition;
+            @MousePosition.performed += instance.OnMousePosition;
+            @MousePosition.canceled += instance.OnMousePosition;
+        }
+
+        private void UnregisterCallbacks(IUIActions instance)
+        {
+            @MousePosition.started -= instance.OnMousePosition;
+            @MousePosition.performed -= instance.OnMousePosition;
+            @MousePosition.canceled -= instance.OnMousePosition;
+        }
+
+        public void RemoveCallbacks(IUIActions instance)
+        {
+            if (m_Wrapper.m_UIActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IUIActions instance)
+        {
+            foreach (var item in m_Wrapper.m_UIActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_UIActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public UIActions @UI => new UIActions(this);
+
+    // BlockInDialogs
+    private readonly InputActionMap m_BlockInDialogs;
+    private List<IBlockInDialogsActions> m_BlockInDialogsActionsCallbackInterfaces = new List<IBlockInDialogsActions>();
+    private readonly InputAction m_BlockInDialogs_OpenInventory;
+    public struct BlockInDialogsActions
+    {
+        private @MainInputSystem m_Wrapper;
+        public BlockInDialogsActions(@MainInputSystem wrapper) { m_Wrapper = wrapper; }
+        public InputAction @OpenInventory => m_Wrapper.m_BlockInDialogs_OpenInventory;
+        public InputActionMap Get() { return m_Wrapper.m_BlockInDialogs; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(BlockInDialogsActions set) { return set.Get(); }
+        public void AddCallbacks(IBlockInDialogsActions instance)
+        {
+            if (instance == null || m_Wrapper.m_BlockInDialogsActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_BlockInDialogsActionsCallbackInterfaces.Add(instance);
+            @OpenInventory.started += instance.OnOpenInventory;
+            @OpenInventory.performed += instance.OnOpenInventory;
+            @OpenInventory.canceled += instance.OnOpenInventory;
+        }
+
+        private void UnregisterCallbacks(IBlockInDialogsActions instance)
+        {
+            @OpenInventory.started -= instance.OnOpenInventory;
+            @OpenInventory.performed -= instance.OnOpenInventory;
+            @OpenInventory.canceled -= instance.OnOpenInventory;
+        }
+
+        public void RemoveCallbacks(IBlockInDialogsActions instance)
+        {
+            if (m_Wrapper.m_BlockInDialogsActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IBlockInDialogsActions instance)
+        {
+            foreach (var item in m_Wrapper.m_BlockInDialogsActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_BlockInDialogsActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public BlockInDialogsActions @BlockInDialogs => new BlockInDialogsActions(this);
     public interface IPlayerMapActions
     {
         void OnMovement(InputAction.CallbackContext context);
+        void OnDropItem(InputAction.CallbackContext context);
+    }
+    public interface IUIActions
+    {
+        void OnMousePosition(InputAction.CallbackContext context);
+    }
+    public interface IBlockInDialogsActions
+    {
+        void OnOpenInventory(InputAction.CallbackContext context);
     }
 }
