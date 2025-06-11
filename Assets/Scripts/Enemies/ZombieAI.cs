@@ -1,8 +1,9 @@
-﻿using Player;
+﻿using Environment;
+using Player;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ZombieAI : MonoBehaviour
+public class ZombieAI : MonoBehaviour, Damageable
 {
     public Transform target;
     public float detectionRange = 6f;
@@ -62,4 +63,12 @@ public class ZombieAI : MonoBehaviour
         }
     }
 
+    void Damageable.Damage(float damage)
+    {
+        Health -= damage;
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

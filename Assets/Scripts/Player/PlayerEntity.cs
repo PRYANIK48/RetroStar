@@ -1,5 +1,6 @@
 using System;
 using Item;
+using Item.SpecialItemTypes;
 using JetBrains.Annotations;
 using Player.Inventory;
 using Player.Inventory.InventoryGUI;
@@ -84,11 +85,13 @@ namespace Player
         {
             MainInputManager.InputSystem.BlockInDialogs.OpenInventory.performed += ChangeInventoryState;
             MainInputManager.InputSystem.PlayerMap.DropItem.performed += DropItemEvent;
+            MainInputManager.InputSystem.PlayerMap.Attack.performed += OnAttack;
         }
         private void OnDisable()
         {
             MainInputManager.InputSystem.BlockInDialogs.OpenInventory.performed -= ChangeInventoryState;
             MainInputManager.InputSystem.PlayerMap.DropItem.performed -= DropItemEvent;
+            MainInputManager.InputSystem.PlayerMap.Attack.performed -= OnAttack;
             
         }
 
@@ -224,6 +227,15 @@ namespace Player
             if (audioSource != null && clip != null)
             {
                 audioSource.PlayOneShot(clip);
+            }
+        }
+
+        private void OnAttack(InputAction.CallbackContext callbackContext)
+        {
+            var item = InventoryStorage.instance.GetSelectedItem();
+            if (item is { ItemType: Weapon weapon })
+            {
+                weapon.OnAttack(this, movementDirection);
             }
         }
     }

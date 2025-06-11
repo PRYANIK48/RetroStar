@@ -18,6 +18,8 @@ namespace Player.Inventory
         private Coroutine pickupTextCoroutine;
 
         private int selectedSlotIndex = 0;
+        public static int staticSelectedSlotIndex { get; private set; }
+        
         [SerializeField] private InventoryGUI.InventoryGUI inventoryGUI;
 
         private void Awake()
@@ -72,19 +74,25 @@ namespace Player.Inventory
         private void SelectNextSlot()
         {
             selectedSlotIndex = (selectedSlotIndex + 1) % slots.Length;
+            staticSelectedSlotIndex = selectedSlotIndex;
             UpdateSlotHighlight();
         }
 
         private void SelectPreviousSlot()
         {
             selectedSlotIndex--;
-            if (selectedSlotIndex < 0) selectedSlotIndex = slots.Length - 1;
+            if (selectedSlotIndex < 0)
+            {
+                selectedSlotIndex = slots.Length - 1;
+            }
+            staticSelectedSlotIndex = selectedSlotIndex;
             UpdateSlotHighlight();
         }
 
         private void SelectSlot(int index)
         {
             selectedSlotIndex = index;
+            staticSelectedSlotIndex = selectedSlotIndex;
             UpdateSlotHighlight();
         }
 
