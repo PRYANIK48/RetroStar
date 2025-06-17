@@ -2,8 +2,9 @@
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
+using Environment;
 
-public class ZombieAI : MonoBehaviour
+public class ZombieAI : MonoBehaviour , Damageable
 {
     [Header("Параметры")]
     public float detectionRange = 6f;
@@ -100,9 +101,6 @@ public class ZombieAI : MonoBehaviour
             PlayerEntity.instance?.Damage(Damage);
         }
     }
-
-<<<<<<< Updated upstream
-=======
     void Damageable.Damage(float damage)
     {
         if (isDead) return;
@@ -151,5 +149,4 @@ public class ZombieAI : MonoBehaviour
         // TODO: пророботанная смэртб, и анимка
         Destroy(gameObject);
     }
->>>>>>> Stashed changes
 }
