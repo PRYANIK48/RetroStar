@@ -134,5 +134,11 @@ namespace Player.Inventory
             dropped = null;
             return true;
         }
+        
+
+        public ItemStack GetSelectedItem()
+        {
+            return GetHotbarItem(Inventory.staticSelectedSlotIndex);
+        }
     }
 }
