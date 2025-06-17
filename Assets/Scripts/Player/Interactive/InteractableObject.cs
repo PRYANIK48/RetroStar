@@ -24,7 +24,10 @@ public class InteractableObject : MonoBehaviour
         if (other.GetComponent<PlayerEntity>())
         {
             isPlayerNear = true;
-            hint.SetActive(true);
+            if (hint != null)
+            {
+                hint.SetActive(true);
+            }
         }
     }
 
@@ -40,7 +43,10 @@ public class InteractableObject : MonoBehaviour
     {
         if (!isPlayerNear)
         {
-            hint.SetActive(false);
+            if (hint != null)
+            {
+                hint.SetActive(true);
+            }
         }
         if (isPlayerNear && Input.GetKeyDown(interactionKey))
         {
