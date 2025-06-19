@@ -21,4 +21,9 @@ public class SceneTransition : MonoBehaviour
             fadeImage.gameObject.SetActive(false);
         }
     }
+
+    public void ApplicationQuit()
+    {
+        Application.Quit();
+    }
 }

@@ -14,6 +14,6 @@ public class ButtonSound : MonoBehaviour
 
     public void PlaySound()
     {
-        audioSource.Play();
+        audioSource.PlayOneShot(audioSource.clip);
     }
 }

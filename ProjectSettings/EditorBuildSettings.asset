@@ -15,6 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Tavern.unity
     guid: 4bf913eec9f77094995e17d53f8765c7
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 6f93e0dd49957cd4b8422872ac1ce46c, type: 2}
     com.unity.dt.app-ui: {fileID: 11400000, guid: 99f9c9493070a9d4c979a8fec7c5a8d3, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 5e7b3075d80fc8e28ba51d41232aae2e, type: 3}
+    com.unity.localization.settings: {fileID: 11400000, guid: 779bc32da7b512140ad1c11b9b991161, type: 2}
   m_UseUCBPForAssetBundles: 0

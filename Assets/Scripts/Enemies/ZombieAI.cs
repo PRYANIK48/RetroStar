@@ -25,6 +25,7 @@ public class ZombieAI : MonoBehaviour , Damageable
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private AudioSource audioSource;
+    private Rigidbody2D rb;
 
     private float checkInterval = 0.25f;
     private float checkTimer = 0f;
@@ -42,6 +43,8 @@ public class ZombieAI : MonoBehaviour , Damageable
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
+
+        rb = GetComponent<Rigidbody2D>();
 
         originalColor = spriteRenderer.color;
         detectionRangeSqr = detectionRange * detectionRange;
@@ -144,6 +147,13 @@ public class ZombieAI : MonoBehaviour , Damageable
         }
     }
 
+    private void Knockback()
+    {
+        if (target == null) return;
+
+        Vector2 dir = (transform.position - target.position).normalized;
+        rb.AddForce(dir * knockbackForce, ForceMode2D.Impulse);
+    }
     private void Die()
     {
         // TODO: пророботанная смэртб, и анимка
